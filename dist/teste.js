@@ -81,67 +81,26 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/test.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src lazy recursive":
-/*!***********************************!*\
-  !*** ./src lazy namespace object ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncaught exception popping up in devtools
-	return Promise.resolve().then(function() {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "./src lazy recursive";
-
-/***/ }),
-
-/***/ "./src/main.ts":
+/***/ "./src/test.ts":
 /*!*********************!*\
-  !*** ./src/main.ts ***!
+  !*** ./src/test.ts ***!
   \*********************/
-/*! no exports provided */
+/*! exports provided: say */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! path */ "path");
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_0__);
-
-console.log('main');
-var testPath = path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, 'test.js');
-console.log('testPath:', testPath);
-__webpack_require__("./src lazy recursive")(testPath).then(function (res) {
-  console.log('rrres:', res);
-})["catch"](function (err) {
-  console.log('eerr:', err);
-});
-
-/***/ }),
-
-/***/ "path":
-/*!***********************!*\
-  !*** external "path" ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("path");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "say", function() { return say; });
+var say = function say() {
+  console.log('what the fuck');
+};
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=teste.js.map
